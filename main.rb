@@ -1,5 +1,4 @@
 require_relative "worldbuffer"
-require 'colorize'
 
 currentFrame = Worldbuffer.new
 currentFrame.printworld

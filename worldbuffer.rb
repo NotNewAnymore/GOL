@@ -1,5 +1,4 @@
 require_relative "ArrayRevisions"
-require 'colorize'
 class Worldbuffer
   def initialize
     $world =[
