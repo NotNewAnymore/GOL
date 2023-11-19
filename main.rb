@@ -9,10 +9,11 @@ currentFrame.randomizeworld
 # currentFrame.testworld3
 # currentFrame.Herschel
 # currentFrame.Acorn
+# currentFrame.Pentadecathlon
 1000.times{
   # currentFrame.printadjacent
   currentFrame.printworld
   puts ""
 currentFrame.iterate
-sleep 0.05
+sleep 0.1176512112192195
 }
