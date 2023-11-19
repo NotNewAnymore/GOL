@@ -8,11 +8,11 @@ sleep 1
 currentFrame.testworld
 # currentFrame.testworld2
 
-100.times{
+1000.times{
   puts ""
-  currentFrame.printadjacent
+  # currentFrame.printadjacent
   currentFrame.printworld
 
 currentFrame.iterate
-sleep 1
+sleep 0.1
 }
