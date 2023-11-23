@@ -47,8 +47,10 @@ class Worldbuffer
       ["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"]
     ]
   end
+    @worldportion = 0
     #Accessors
     attr_accessor :world
+    attr_accessor :worldportion
   #Methods
   def printworld
   displayFrame = ""
@@ -182,7 +184,7 @@ class Worldbuffer
     ]
   end
   def randomizeworld
-    worldportion = rand
+    worldportion
     i = 0
     while i < @world.length()
       j = 0

@@ -5,6 +5,8 @@ include Fox
 
 currentFrame = Worldbuffer.new
 sleep 1
+puts "Enter percent of world to start alive"
+currentFrame.worldportion = Float(gets) / 100
 currentFrame.randomizeworld
 # currentFrame.testworld
 # currentFrame.testworld2
@@ -15,8 +17,9 @@ currentFrame.randomizeworld
 displaythread = Thread.new{
   displayWindow = FXApp.new
   main = FXMainWindow.new(displayWindow, "Hello, World!" , :width => 800, :height => 400)
-  label = FXLabel.new(main, "This is a test of the label", icon = nil, opts = LABEL_NORMAL, x = 100)
+  label = FXLabel.new(main, "You should never see this! \nSomething's probably wrong with the display logic!", icon = nil, opts = LABEL_NORMAL, x = 100)
   label.font = FXFont.new(displayWindow,"Consolas")
+  exitButton = FXButton.new(main, "Exit", nil, displayWindow, FXApp::ID_QUIT)
   displayWindow.create
   main.show(PLACEMENT_SCREEN)
     writeToDisplay = Thread.new{
@@ -37,8 +40,8 @@ displaythread = Thread.new{
   # }
 }
 
-testinput = gets
-1.times{
-  puts "User input was: #{testinput}"
-}
+# testinput = gets
+# 1.times{
+#   puts "User input was: #{testinput}"
+# }
 displaythread.join
