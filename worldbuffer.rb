@@ -47,7 +47,9 @@ class Worldbuffer
       ["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"]
     ]
   end
-
+    #Accessors
+    attr_accessor :world
+  #Methods
   def printworld
   @world.each{|i|
   i.each{|j|
