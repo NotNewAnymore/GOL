@@ -51,18 +51,24 @@ class Worldbuffer
     attr_accessor :world
   #Methods
   def printworld
+  displayFrame = ""
   @world.each{|i|
   i.each{|j|
     if j == "1"
-      putc "█"
+      # putc "█"
+      displayFrame += "█"
       elsif j == "0"
-        putc "·"
+        # putc "·"
+        displayFrame += "·"
       else
-        putc "."
+        # putc "."
+        displayFrame += "."
       end
   }
-    putc "\n"
+    # putc "\n"
+    displayFrame += "\n"
   }
+  displayFrame
   end
   def printadjacent
     @adjacent.each{|i|
